@@ -32,6 +32,23 @@ namespace Orai230905
                 f3 += k.UtasokSzama;
             }
             Console.WriteLine($"3. feladat: {f3} fő");
+
+            Console.Write("4. feladat kulcsszó:  ");
+            string ksz = Console.ReadLine();
+
+            //bool f4 = kategoriak.Any(k => k.KategoriaNev.Contains(ksz));
+            //Console.WriteLine($"\t{(f4 ? "VAN" : "NINCS")} találat");
+
+            int i = 0;
+            while (i < kategoriak.Count() && !kategoriak[i].KategoriaNev.Contains(ksz))
+            {
+                i++;
+            }
+            if (i < kategoriak.Count())
+            {
+                Console.WriteLine("\tVAN találat");
+            }
+            else Console.WriteLine("\tNincs találat");
         }
     }
 }
