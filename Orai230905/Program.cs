@@ -73,6 +73,16 @@ namespace Orai230905
             {
                 Console.WriteLine($"\t{n}");
             }
+
+            int max = 0;
+            for (int j = 1; j < kategoriak.Count; j++)
+            {
+                if (kategoriak[j].TulelokSzama > kategoriak[max].TulelokSzama) max = j;
+                {
+
+                }
+            }
+            Console.WriteLine($"7. feladat: {kategoriak[max].KategoriaNev}");
         }
     }
 }
