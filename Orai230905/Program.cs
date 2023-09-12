@@ -59,7 +59,20 @@ namespace Orai230905
             }
             else Console.WriteLine("\tNincs találat");
 
+            List<string> meghaladta = new List<string>();
 
+            foreach (var k in kategoriak)
+            {
+                if (k.EltuntekSzama > k.UtasokSzama * .6)
+                {
+                    meghaladta.Add(k.KategoriaNev);
+                }
+            }
+            Console.WriteLine("6. feladat:");
+            foreach (var n in meghaladta)
+            {
+                Console.WriteLine($"\t{n}");
+            }
         }
     }
 }
