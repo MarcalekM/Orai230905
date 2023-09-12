@@ -47,8 +47,19 @@ namespace Orai230905
             if (i < kategoriak.Count())
             {
                 Console.WriteLine("\tVAN találat");
+
+                Console.WriteLine("5. feladat:");
+                foreach (var k in kategoriak)
+                {
+                    if (k.KategoriaNev.Contains(ksz))
+                    {
+                        Console.WriteLine($"\t{k.KategoriaNev} {k.UtasokSzama} fő");
+                    }
+                }
             }
             else Console.WriteLine("\tNincs találat");
+
+
         }
     }
 }
